@@ -16,9 +16,9 @@ github.comで、自身のアカウントに以下の通りのパブリックな�
 
 自身のPCにクローンして、gitの基本操作を行ってみる。
 
-- ターミナルを開き、`git config`コマンドで自身の名前とメールアドレスを設定しておく(事前準備が済んでいない場合)
-    - `git config --global user.name "あなたの名前"`
-    - `git config --global user.email "あなたのgithubのアカウントのメールアドレス"`
+- ターミナルを開き、gitの初期設定を行う
+  - `git config --global user.name "あなたの名前"`
+  - `git config --global user.email "あなたのgithubのアカウントのメールアドレス"`
 - リポジトリのページのナビゲーションのCodeで、「Code」ボタンからHTTPSのURLをコピーする
   - ![URLをコピー](../image/image1-1.png)
   - `git clone 取得したURL`
