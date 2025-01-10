@@ -12,7 +12,7 @@
 
 テンプレートリポジトリについて確認する。
 
-- `foundaitons-hands-on-1`リポジトリのナビゲーションのSettingsにアクセスする
+- `foundations-hands-on-1`リポジトリのナビゲーションのSettingsにアクセスする
 - Generalの`Template repository`にチェックを入れる
 - ![Template repository](../image/image2-1.png)
 - ナビゲーションのCodeで、右上の「Use this template」を押して、テンプレートから`foundations-hands-on-2`という新しいパブリックリポジトリを作成する
@@ -22,18 +22,20 @@
 
 github.com上でのブランチの作成方法を確認する。
 
-- `foundations-hands-on-2`リポジトリにgithub.comでアクセスし、ナビゲーションのCodeでブランチ選択のプルダンを開き、検索で`update-readme-2`と入れてブランチを作る
+- `foundations-hands-on-2`リポジトリにgithub.comでアクセスし、ナビゲーションのCodeでブランチ選択のプルダウンを開き、「Switch branches/tags」の下の枠に`update-readme-2`と入力し、「Create branch update-readme-2 from main」を選択して`update-readme-2`ブランチを作る
 - ![Create a branch](../image/image2-3.png)
 
 ## ファイルの追加
 
 github.com上でのファイルの追加方法を確認する。
 
-- ナビゲーションのCodeから「Add file」ボタンを押してファイルを追加する
+- ナビゲーションのCodeから「Add file」ボタンを押してファイルを作成する
   - ![Add file](../image/image2-4.png)
+    - (*)ウインドウのサイズなどによって「Add file」ボタンが「＋」ボタンになっている場合がある
   - ファイル名に`.github/README.md`と入力
-  - ![inpyut file name](../image/image2-5.png)
-  - 本文に`# foundaitons-hands-on-2`と入力
+  - ![input file name](../image/image2-5.png)
+  - 本文に`# foundaitons-hands-on-2`と入力してコミットする
+  - ![変更内容をコミット](../image/image2-9.png)
 - ナビゲーションのCodeで、今作ったファイルがREADMEとして表示されていることを確認する
   - これによって、複数のREADMEがある場合、`.github`ディレクトリ -> rootディレクトリ -> `docs`ディレクトリの順で優先的に表示されるようになっていることが分かる
   - 時間があるならファイルを削除したり、`docs/README.md`を作成してみて、複数のREADMEがある場合の動作を詳細に確認する
@@ -44,15 +46,15 @@ github.com上でのファイルの追加方法を確認する。
 
 Starについて確認する。
 
-- [vscode](https://github.com/microsoft/vscode)にアクセス
+- [Visual Studio Codeのリポジトリ](https://github.com/microsoft/vscode)にアクセス
   - starを押してみる
   - ![star](../image/image2-6.png)
-- [stars](https://github.com/stars)にアクセスしてみると、vscodeが出てくるのを確認する
-- vscodeのリポジトリに戻って、画面右のメタデータの[stars](https://github.com/microsoft/vscode/stargazers)を見てみると、starを付けたアカウントが見られることを確認する
+- [https://github.com/stars](https://github.com/stars)にアクセスしてみると、vscodeが出てくるのを確認する
+- Visual Studio Codeのリポジトリに戻って、[画面右のメタデータのstars](https://github.com/microsoft/vscode/stargazers)を見てみると、starを付けたアカウントが見られることを確認する
 
 ## Feature preview
 
-任意の画面からアカウントアイコンをクリックし、メニューから「Feature preview」にアクセスしてみる。
+github.comの任意の画面からアカウントアイコンをクリックし、メニューから「Feature preview」にアクセスしてみる。
 
 ![account icon](../image/image2-7.png)
 
