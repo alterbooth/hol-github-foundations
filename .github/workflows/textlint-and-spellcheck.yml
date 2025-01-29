@@ -17,7 +17,7 @@ jobs:
           run: npm install -g textlint \
                 textlint-rule-preset-japanese \
                 textlint-rule-preset-ja-technical-writing-install \
-                cspell    
+                cspell
         - name: Run textlint
           run: textlint '**/*.md'
         - name: Run spellchecker
