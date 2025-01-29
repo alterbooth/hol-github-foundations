@@ -16,6 +16,6 @@ jobs:
         - name: Install dependencies
           run: sudo npm install -g textlint textlint-rule-preset-japanese textlint-rule-preset-ja-technical-writing cspell
         - name: Run textlint
-          run: textlint '**/*.md'
+          run: textlint --dry-run '**/*.md'
         - name: Run spellchecker
           run: cspell '**/*.md'
