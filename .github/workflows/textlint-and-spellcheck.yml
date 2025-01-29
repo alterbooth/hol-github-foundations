@@ -1,11 +1,24 @@
 name: textlint and spellckeck
 
 on:
-  workflow_dispatch
+  push
 
 jobs:
     textlint-and-spellcheck:
         runs-on: ubuntu-latest
         steps:
         - name: Checkout
-          uses: actions/checkout@v4  
+          uses: actions/checkout@v4    
+        - name: Setup Node.js
+          uses: actions/setup-node@v4
+          with:
+            node-version: '20.x'
+        - name: Install dependencies
+          run: npm install -g textlint \
+                textlint-rule-preset-japanese \
+                textlint-rule-preset-ja-technical-writing-install \
+                cspell    
+        - name: Run textlint
+          run: textlint '**/*.md'
+        - name: Run spellchecker
+          run: cspell '**/*.md'
