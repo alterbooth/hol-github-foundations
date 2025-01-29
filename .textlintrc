@@ -2,7 +2,6 @@
   "plugins": {},
   "filters": {},
   "rules": {
-    /*
     "preset-ja-technical-writing": {
       "no-doubled-joshi": {
         "allow": [ "へ","で"]
@@ -12,7 +11,6 @@
       "no-doubled-joshi": {
         "allow": [ "へ","で"]
       }
-    },*/
-    "spellchecker": true
+    }
   }
 }
