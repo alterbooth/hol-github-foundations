@@ -2,7 +2,15 @@
   "plugins": {},
   "filters": {},
   "rules": {
-    "preset-ja-technical-writing": true,
-    "preset-japanese": true
+    "preset-ja-technical-writing": {
+      "no-doubled-joshi": {
+        "allow": [ "へ","で","に","が"]
+      }  
+    },
+    "preset-japanese": {
+      "no-doubled-joshi": {
+        "allow": [ "へ","で","に","が"]
+      }
+    }
   }
 }
