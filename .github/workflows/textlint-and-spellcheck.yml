@@ -16,8 +16,6 @@ jobs:
         - name: Install dependencies
           run: npm install
         - name: Run textlint
-          continue-on-error: true
           run: npx textlint '**/*.md'
         - name: Run spellchecker
-          continue-on-error: true
           run: npx cspell '**/*.md'
