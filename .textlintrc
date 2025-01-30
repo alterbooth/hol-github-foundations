@@ -4,12 +4,12 @@
   "rules": {
     "preset-ja-technical-writing": {
       "no-doubled-joshi": {
-        "allow": [ "へ","で"]
+        "allow": [ "へ","で","に","が"]
       }  
     },
     "preset-japanese": {
       "no-doubled-joshi": {
-        "allow": [ "へ","で"]
+        "allow": [ "へ","で","に","が"]
       }
     }
   }
