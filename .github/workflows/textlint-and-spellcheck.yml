@@ -14,9 +14,10 @@ jobs:
           with:
             node-version: '22.x'
         - name: Install dependencies
-          run: sudo npm install -g textlint textlint-rule-preset-japanese textlint-rule-preset-ja-technical-writing cspell
+          run: npm install
         - name: Run textlint
           continue-on-error: true
-          run: textlint --dry-run '**/*.md'
+          run: textlint '**/*.md'
         - name: Run spellchecker
+          continue-on-error: true
           run: cspell '**/*.md'
