@@ -42,6 +42,19 @@ github.com上でのファイルの追加方法を確認する。
   - 参考：[READMEについて](https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
 - ３. 他のファイルについては[公式ドキュメント](https://docs.github.com/ja/enterprise-cloud@latest/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository)を確認しておく
 
+## ファイルの削除
+- １. ナビゲーションのCodeから、削除対象のファイルを選択する
+  - 先ほど作成した`.github/README.md`を選択する
+  - ![.githubフォルダを選択](../image/image2-10.png)
+  - ![README.mdを選択](../image/image2-11.png)
+- ２． ファイルを削除する
+  - 画面右上の`・・・`から`Delete file`を選択する
+  - ![README.mdを削除](../image/image2-13.png)
+- ３． 削除の変更をコミットする
+  - ![README.mdの削除をコミット](../image/image2-14.png)
+- ４． `.github/README.md`が削除されたことを確認する
+  - ![README.mdの削除を確認](../image/image2-15.png)
+
 ## starを付ける
 
 Starについて確認する。
