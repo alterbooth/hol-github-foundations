@@ -83,9 +83,9 @@
 
 - １. GitHub Codespacesを起動する
   - [Codespacesのテンプレート選択ページ](https://github.com/codespaces/templates) にアクセスし、`Blank`を選択する。
-  - ![Codespacesテンプレート選択](../image/image8-1.png)
+  - ![Codespacesテンプレート選択](../image/image1-11.png)
   - 起動したCodespacesのターミナルが表示されていることを確認する
-  - ![Codespacesターミナル](../image/image8-2.png)
+  - ![Codespacesターミナル](../image/image1-12.png)
 - ２． リポジトリとなるディレクトリを作成する
   - ターミナルで`mkdir test-repository`コマンドを実行し、`test-repository`ディレクトリを作成する
   - ターミナルで`cd test-repository`コマンドを実行し、作業ディレクトリを変更する
@@ -96,7 +96,7 @@
 - ４． 変更を加え、gitのコントロール下にあるかを確認する
   - ターミナルで`echo "# test-repository" > README.md`コマンドを実行し、`README.md`ファイルを作成する
   - 画面左部メニューの「ソース管理」を選択し、先ほど作成した`README.md`の変更が追跡されているかを確認する
-  - ![Codespacesソース管理](../image/image8-3.png)
+  - ![Codespacesソース管理](../image/image1-13.png)
 - ５． 変更したファイルをステージングエリアに追加する
   - ターミナルで`git add README.md`コマンドを実行する
 - ６. ステージングエリアのファイルをコミットする
