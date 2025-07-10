@@ -62,6 +62,32 @@ Issueの作成と操作について確認する。
     - Issue formsの定義は[サンプルのYAML](./bug-report.yml)をコピペして、`.github/ISSUE_TEMPLATE/bug-report.yml`を作成する
   - ナビゲーションのIssuesからIssue一覧画面に戻って「New issue」ボタンを押し、Issue templateとIssue formsを使ってIssueを作ってみる
 
+## ブランチ保護ルールの設定
+
+ブランチ保護ルールの作成について確認する。
+
+- １. `foundations-hands-on-2`リポジトリにgithub.comでアクセスし、ナビゲーションのSettingsにアクセスする
+- ２． ルールセットの設定画面から新規ブランチルールセットを作成する
+  - `Rules` ＞ `Ruleset` を選ぶ
+  - ![ルールセットへ移動](../image/image3-37.png)
+  - `New ruleset` ＞ `New branch ruleset` を選ぶ
+  - ![ブランチルールの選択](../image/image3-38.png)
+- ３． ブランチ保護のルールセットを作成する
+  - `Ruleset Name`に`foundations-hands-on-2-ruleset`を入力する
+  - ![RulesetName](../image/image3-39.png)
+  - `Enforcement status`を`Active`に設定する
+  - ![EnforcementStatus](../image/image3-40.png)
+  - `Branch targeting criteria`を`Include default branch`に設定する
+  - ![BranchTargetingCriteria](../image/image3-41.png)
+  - `Require a pull request before merging`をチェック
+  - 表示された追加項目内の`Require conversation resolution before merging`をチェック
+  - ![PullRequestRule](../image/image3-42.png)
+  - ページ下部の、`Create`を押し、ルールセットを作成する
+  - 認証が求められる場合があるため、その際は認証する
+  - ![PullRequestRule](../image/image3-43.png)
+  - `Rulesets`から、ルールセットが作成されていることを確認する
+  - ![ルールセットの確認](../image/image3-44.png)
+
 ## Pull requestの作成と操作
 
 Pull requestの作成と操作について確認する。
@@ -113,10 +139,15 @@ Pull requestの作成と操作について確認する。
   - コメントを書き終わったら「Finish your review」を押してレビューを送る。この時にレビューのコメントを入力し、状態として「Comment」「Approve」「Request changes」のいずれかを選ぶことができる(自分自身へのレビューの場合は「Comment」しか選択できない)ので、状態を選択して「Submit review」を押す
     - ![Finish your review](../image/image3-16-c.png)
 - ９. レビューを確認し、対応する
-  - Conversationタブでレビュー内容を確認して、修正を行う(修正内容をコミットし、プッシュする)
+  - Conversationタブに移動する
+  - レビューコメントが解決されていない場合、マージできないことを確認する
+  - ![cannot merge](../image/image3-45.png)
+  - 修正を行う(修正内容をコミットし、プッシュする)
   - レビューに返信する
   - レビュアーはコメントを確認して、問題なければ「Resolve conversation」を押して解決済みにする
   - ![resolve conversation](../image/image3-16-d.png)
+  - 全てのレビューコメントが解決済みになると、マージできることを確認する
+  - ![merge](../image/image3-46.png)
 - １０. レビューで変更提案を出す
   - ツールチップを利用するか、[suggestionコードブロック](./suggestion.md)を直接入力する
   - ![suggestion](../image/image3-17.png)
