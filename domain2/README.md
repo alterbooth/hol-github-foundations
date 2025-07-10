@@ -43,6 +43,9 @@ github.com上でのファイルの追加方法を確認する。
 - ３. 他のファイルについては[公式ドキュメント](https://docs.github.com/ja/enterprise-cloud@latest/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository)を確認しておく
 
 ## ファイルの削除
+
+github.com上でのファイルの削除方法を確認する。
+
 - １. ナビゲーションのCodeから、削除対象のファイルを選択する
   - 先ほど作成した`.github/README.md`を選択する
   - ![.githubフォルダを選択](../image/image2-10.png)
