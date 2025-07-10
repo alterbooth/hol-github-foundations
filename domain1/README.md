@@ -67,12 +67,12 @@
   - 変更内容を直接コミットする
   - ![変更内容をコミット](../image/image1-9.png)
   - `README.md`の変更履歴を確認する
-  - コミット直後の画面で、`History`を押す
-  - ![変更ない脳の確認](../image/image1-10.png)
+  - コミット後の画面で、`History`を押す
+  - ![変更内容の確認](../image/image1-10.png)
 - １5. 画面で変更したものをローカルのリポジトリに反映する
   - Visual Studio Codeのターミナルで`git pull`コマンドを実行する
   - `README.md`が変更されているのを確認する
-  - `git log`コマンドを実行する
+  - ターミナルで`git log`コマンドを実行する
   - ローカルの変更履歴を確認する
 
 ※ Gitの初期設定（`git config`）についての詳細は、[Gitの初期設定](https://git-scm.com/book/ja/v2/%e4%bd%bf%e3%81%84%e5%a7%8b%e3%82%81%e3%82%8b-%e6%9c%80%e5%88%9d%e3%81%aeGit%e3%81%ae%e6%a7%8b%e6%88%90)の「個人の識別情報」をご参照ください。
