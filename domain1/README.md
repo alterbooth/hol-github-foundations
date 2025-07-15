@@ -66,12 +66,12 @@
   - [公式ドキュメント](https://docs.github.com/ja/enterprise-cloud@latest/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
   - 変更内容を直接コミットする
   - ![変更内容をコミット](../image/image1-9.png)
-  - `README.md`の変更履歴を確認する
+- １５． `README.md`の変更履歴を確認する
   - コミット後の画面で、`History`を押す
   - ![変更内容の確認1](../image/image1-10-a.png)
   - 変更履歴を確認する
   - ![変更内容の確認2](../image/image1-10-b.png)
-- １５. 画面で変更したものをローカルのリポジトリに反映する
+- １６. 画面で変更したものをローカルのリポジトリに反映する
   - Visual Studio Codeのターミナルで`git pull`コマンドを実行する
   - `README.md`が変更されているのを確認する
   - ターミナルで`git log`コマンドを実行する
