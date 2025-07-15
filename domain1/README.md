@@ -68,7 +68,9 @@
   - ![変更内容をコミット](../image/image1-9.png)
   - `README.md`の変更履歴を確認する
   - コミット後の画面で、`History`を押す
-  - ![変更内容の確認](../image/image1-10.png)
+  - ![変更内容の確認1](../image/image1-10-a.png)
+  - 変更履歴を確認する
+  - ![変更内容の確認2](../image/image1-10-b.png)
 - １５. 画面で変更したものをローカルのリポジトリに反映する
   - Visual Studio Codeのターミナルで`git pull`コマンドを実行する
   - `README.md`が変更されているのを確認する
