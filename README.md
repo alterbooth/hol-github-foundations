@@ -1,5 +1,5 @@
 # GitHub Foundaitons ハンズオン手順書
-このリポジトリはフォークです。
+このRipositoryはフォークです。
 
 ## 参加者事前準備
 
