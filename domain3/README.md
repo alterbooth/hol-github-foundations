@@ -142,7 +142,6 @@ Pull requestの作成と操作について確認する。
   - Conversationタブに移動する
   - レビューコメントが解決されていない場合、マージできないことを確認する
   - ![cannot merge](../image/image3-45.png)
-  - 修正を行う(修正内容をコミットし、プッシュする)
   - レビューに返信する
   - レビュアーはコメントを確認して、問題なければ「Resolve conversation」を押して解決済みにする
   - ![resolve conversation](../image/image3-16-d.png)
