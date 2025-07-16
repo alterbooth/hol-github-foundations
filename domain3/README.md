@@ -209,8 +209,9 @@ Pull requestの作成と操作について確認する。
   - ![AssistiveModeCopilot2](../image/image3-57.png)
 - ８． Review in codespaceを使用する
   - `Files changed`タブから`Review in codespace`を押す
-  - ![ReviewInCodespace](../image/image3-58.png)
+  - ![ReviewInCodespace](../image/image3-58-a.png)
   - `Create codespace`画面に移動したら`Create new codespace`を押す
+  - ![ReviewInCodespace](../image/image3-58-b.png)
   - codespaceから変更が閲覧できることを確認する
   - ![ReviewInCodespace](../image/image3-59.png)
 - ９． Codespaceを起動する
