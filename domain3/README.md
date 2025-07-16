@@ -207,19 +207,16 @@ Pull requestの作成と操作について確認する。
   - ![AssistiveModeCopilot1](../image/image3-56.png)
   - プルリクエストについて会話できることを確認する
   - ![AssistiveModeCopilot2](../image/image3-57.png)
-- ８． Review in codespaceを使用する
+- ８． Review in codespaceの起動手順を確認する
   - 「Files changed」タブから「Review in codespace」を押す
-  - ![ReviewInCodespace](../image/image3-58-a.png)
-  - 「Create codespace」画面に移動したら「Create new codespace」を押す
-  - ![ReviewInCodespace](../image/image3-58-b.png)
-  - codespaceから変更が閲覧できることを確認する
-  - ![ReviewInCodespace](../image/image3-59.png)
-- ９． Codespaceを起動する
+  - ![ReviewInCodespace1](../image/image3-58-a.png)
+  - 「Create codespace」画面に移動したら「Create new codespace」を押すことで、Codespaceを起動できる
+  - ![ReviewInCodespace2](../image/image3-58-b.png)
+- ９． Codespaceの起動手順を確認する
   - 「Code」タブを開く
   - 「Code」メニューを押し、「Codespace」タブに切り替える
-  - 先ほど作成したCodespaceがあるため、「・・・」から「Open in Brower」を押す
+  - 先ほど作成したCodespaceがあるため、「・・・」から「Open in Brower」を押すことで、Codespaceを起動できる
   - ![RunCodespace](../image/image3-62.png)
-  - Codespaceが起動することを確認する
 - １０．Copilotにレビューを依頼する
   - 自身が作成したプルリクエストを開き、画面右側の「Reviewers」の「歯車アイコン」から「CopilotReview」を選択する
   - ![ReviewInCodespace](../image/image3-60.png)
