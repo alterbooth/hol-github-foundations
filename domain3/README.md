@@ -228,7 +228,13 @@ Pull requestの作成と操作について確認する。
   - ![ReviewInCodespace](../image/image3-60.png)
   - Copilotがレビューしてくれることを確認する
   - ![ReviewInCodespace](../image/image3-61.png)
-
+- １１． チェックアウトの方法を確認する
+  - 自身が作成したプルリクエストを開き、画面右側の「Code」を押す
+  - ![PullrequestCode](../image/image3-69.png)
+  - 「Local」タブを開き、「GitHub CLI」や「GitHub Desktop」でチェックアウトできることを確認する
+  - ![PullrequestCodeLocal](../image/image3-70.png) 
+  - 「Codespaces」タブを開き、「+」ボタンや「Create codespace on ブランチ名」でCodespaceを使用しでチェックアウトできることを確認する
+  - ![PullrequestCodeCodespaces](../image/image3-71.png) 
 
 ## Discussions
 
