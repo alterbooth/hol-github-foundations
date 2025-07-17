@@ -66,27 +66,31 @@ Issueの作成と操作について確認する。
 
 ブランチ保護ルールの作成について確認する。
 
-- １. `foundations-hands-on-2`リポジトリにgithub.comでアクセスし、ナビゲーションのSettingsにアクセスする
-- ２． ルールセットの設定画面から新規ブランチルールセットを作成する
-  - `Rules` ＞ `Ruleset` を選ぶ
-  - ![ルールセットへ移動](../image/image3-37.png)
-  - `New ruleset` ＞ `New branch ruleset` を選ぶ
-  - ![ブランチルールの選択](../image/image3-38.png)
-- ３． ブランチ保護のルールセットを作成する
-  - `Ruleset Name`に`foundations-hands-on-2-ruleset`を入力する
-  - ![RulesetName](../image/image3-39.png)
-  - `Enforcement status`を`Active`に設定する
-  - ![EnforcementStatus](../image/image3-40.png)
-  - `Branch targeting criteria`を`Include default branch`に設定する
-  - ![BranchTargetingCriteria](../image/image3-41.png)
-  - `Require a pull request before merging`をチェック
-  - 表示された追加項目内の`Require conversation resolution before merging`をチェック
-  - ![PullRequestRule](../image/image3-42.png)
-  - ページ下部の、`Create`を押し、ルールセットを作成する
-  - 認証が求められる場合があるため、その際は認証する
-  - ![PullRequestRule](../image/image3-43.png)
-  - `Rulesets`から、ルールセットが作成されていることを確認する
-  - ![ルールセットの確認](../image/image3-44.png)
+- １. `foundations-hands-on-2`リポジトリにgithub.comでアクセスする
+- ２． 新規ブランチ保護ルールの作成画面に移動する
+  - 「Settings」 ＞ 「Branches」 ＞ 「Add classic branch protection rule」 を押す
+  - ![BranchProtectionRuleの画面](../image/image3-63.png)
+- ３． ブランチルールを作成する
+  - 「Branch name pattern」を`main`にする
+    - 「Branch name pattern」は、特定のブランチだけでなく、全てのブランチや、fnmatch構文でのパターン指定ができる
+    - 詳細は[公式ドキュメント](https://docs.github.com/ja/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule#about-branch-protection-rules)を参照
+  - ![BranchProtectionRuleの入力1](../image/image3-64-a.png)
+  - 「Required a pull request before merging」にチェックを入れる
+  - 「Require conversation resolution before merging」にチェックを入れる
+  - 「Do not allow bypassing the above settings」にチェックを入れる
+    - 今回は`main`ブランチに直接pushできないことを確認するため、管理者権限を持っていてもブランチ保護ルールを無視できないように設定する
+  - ![BranchProtectionRuleの入力2](../image/image3-64-b.png)
+  - 画面下部の「Create」を押し、ブランチ保護ルールを作成する
+  - ![BranchProtectionRuleの作成](../image/image3-65.png)
+  - `main`を対象としたブランチ保護ルールが作成されたことを確認する
+  - ![BranchProtectionRuleの確認](../image/image3-66.png)
+- ３． ブランチ保護ルールが適用されているかを確認する
+  - 「Code」タブに戻り、ブランチが「main」になっていることを確認する
+  - 「Add files」 ＞ 「Create new file」からファイルを新規作成する
+  - ![BranchProtectionRuleが適用されているか確認1](../image/image3-67.png)
+  - 任意の値を入力し、「Commit changes...」を押す
+  - 「You can't commit to main because it is a protected branch」となり、直接コミットができないことを確認する
+  - ![BranchProtectionRuleが適用されているか確認1](../image/image3-68.png)
 
 ## Pull requestの作成と操作
 
