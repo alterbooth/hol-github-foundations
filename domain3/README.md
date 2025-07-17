@@ -198,7 +198,7 @@ Pull requestの作成と操作について確認する。
   - `alterbooth/hol-github-foundations`にプルリクエストが作成されたことを確認する
   - ![フォークのプルリクエストの確認](../image/image3-51.png)
 - ５． 任意のファイルを引用してCopilotと会話する
-  - 「Files changed」タブから「Ask Copilot」を押し、任意のファイルを選択し`Start chat`を押す
+  - 「Files changed」タブから「Ask Copilot」を押し、任意のファイルを選択し「Start chat」を押す
   - ![AskCopilot1](../image/image3-52.png)
   - 任意のファイルを引用してCopilotと会話できることを確認する
   - ![AskCopilot2](../image/image3-53.png)

@@ -51,7 +51,7 @@ github.com上でのファイルの削除方法を確認する。
   - ![.githubフォルダを選択](../image/image2-10.png)
   - ![README.mdを選択](../image/image2-11.png)
 - ２． ファイルを削除する
-  - 画面右上の`・・・`から`Delete file`を選択する
+  - 画面右上の「・・・」から「Delete file」を選択する
   - ![README.mdを削除](../image/image2-13.png)
 - ３． 削除の変更をコミットする
   - ![README.mdの削除をコミット](../image/image2-14.png)
