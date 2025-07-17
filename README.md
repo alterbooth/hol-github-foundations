@@ -1,4 +1,4 @@
-# GitHub Foundations ハンズオン手順書
+# GitHub Foundaitons ハンズオン手順書
 このRipositoryはフォークです。
 
 ## 参加者事前準備
