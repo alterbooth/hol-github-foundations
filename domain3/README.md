@@ -86,7 +86,7 @@ Issueの作成と操作について確認する。
   - ![BranchProtectionRuleの確認](../image/image3-66.png)
 - ３． ブランチ保護ルールが適用されているかを確認する
   - 「Code」タブに戻り、ブランチが「main」になっていることを確認する
-  - 「Add files」 ＞ 「Create new file」からファイルを新規作成する
+  - 「Add files」 > 「Create new file」からファイルを新規作成する
   - ![BranchProtectionRuleが適用されているか確認1](../image/image3-67.png)
   - 任意の値を入力し、「Commit changes...」を押す
   - 「You can't commit to main because it is a protected branch」となり、直接コミットができないことを確認する
