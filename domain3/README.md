@@ -68,7 +68,7 @@ Issueの作成と操作について確認する。
 
 - １. `foundations-hands-on-2`リポジトリにgithub.comでアクセスする
 - ２． 新規ブランチ保護ルールの作成画面に移動する
-  - 「Settings」 ＞ 「Branches」 ＞ 「Add classic branch protection rule」 を押す
+  - 「Settings」 > 「Branches」 > 「Add classic branch protection rule」 を押す
   - ![BranchProtectionRuleの画面](../image/image3-63.png)
 - ３． ブランチルールを作成する
   - 「Branch name pattern」を`main`にする
