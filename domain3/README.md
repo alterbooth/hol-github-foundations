@@ -184,8 +184,8 @@ Pull requestの作成と操作について確認する。
 - ３． フォークしたリポジトリに変更を加える
   - 新規ブランチ`fork-1`を作成する
   - `README.md`の文章に、誤字を混ぜた行を追加し、コミットする
-  - ここでは`このRipositoryはフォークです。`を追加する
-  - ![誤字の追加](../image/image3-48-b.png)
+    - ここでは`このRipositoryはフォークです。`を追加する
+    - ![誤字の追加](../image/image3-48-b.png)
 - ４． プルリクエストを作成する
   - 「Pull requests」タブの「New pull request」を押す
   - 「compare」を押し`fork-1`ブランチを選択する
