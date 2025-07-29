@@ -66,12 +66,47 @@
   - [公式ドキュメント](https://docs.github.com/ja/enterprise-cloud@latest/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
   - 変更内容を直接コミットする
   - ![変更内容をコミット](../image/image1-9.png)
-- １５. 画面で変更したものをローカルのリポジトリに反映する
+- １５． `README.md`の変更履歴を確認する
+  - コミット後の画面で、「History」を押す
+  - ![変更内容の確認1](../image/image1-10-a.png)
+  - 変更履歴を確認する
+  - ![変更内容の確認2](../image/image1-10-b.png)
+- １６. 画面で変更したものをローカルのリポジトリに反映する
   - Visual Studio Codeのターミナルで`git pull`コマンドを実行する
   - `README.md`が変更されているのを確認する
+  - ターミナルで`git log`コマンドを実行する
+  - ローカルの変更履歴を確認する
+    - ログが途中まで表示され、画面下部に`:`が表示されている場合、「矢印キー」または「jキー」/「kキー」でスクロールできる
+    - ログの表示を終了するには、「q」キーを入力する
 
 ※ Gitの初期設定（`git config`）についての詳細は、[Gitの初期設定](https://git-scm.com/book/ja/v2/%e4%bd%bf%e3%81%84%e5%a7%8b%e3%82%81%e3%82%8b-%e6%9c%80%e5%88%9d%e3%81%aeGit%e3%81%ae%e6%a7%8b%e6%88%90)の「個人の識別情報」をご参照ください。
 
+## リポジトリの初期化
+
+リポジトリの初期化を行ってみる。
+
+- １. GitHub Codespacesを起動する
+  - [Codespacesのテンプレート選択ページ](https://github.com/codespaces/templates) にアクセスし、`Blank`を選択する。
+  - ![Codespacesテンプレート選択](../image/image1-11.png)
+  - 起動したCodespacesのターミナルが表示されていることを確認する
+  - ![Codespacesターミナル](../image/image1-12.png)
+- ２． リポジトリとなるディレクトリを作成する
+  - ターミナルで`mkdir test-repository`コマンドを実行し、`test-repository`ディレクトリを作成する
+  - ターミナルで`cd test-repository`コマンドを実行し、作業ディレクトリを変更する
+- ３． リポジトリを初期化する
+  - ターミナルで`git init`コマンドを実行し、リポジトリを初期化する
+  - ターミナルで`ls -d .git`コマンドを実行し、`.git`ディレクトリが存在するかを確認する
+  - ターミナルで`ls .git`コマンドを実行し、`HEAD` `config` `description` などのファイルが存在するかを確認する
+- ４． 変更を加え、gitのコントロール下にあるかを確認する
+  - ターミナルで`echo "# test-repository" > README.md`コマンドを実行し、`README.md`ファイルを作成する
+  - 画面左部メニューの「ソース管理」を選択し、先ほど作成した`README.md`の変更が追跡されているかを確認する
+  - ![Codespacesソース管理](../image/image1-13.png)
+- ５． 変更したファイルをステージングエリアに追加する
+  - ターミナルで`git add README.md`コマンドを実行する
+- ６. ステージングエリアのファイルをコミットする
+  - ターミナルで`git commit -m "initial commit"`コマンドを実行する
+- ７． 変更履歴を確認する
+  - ターミナルで`git log`コマンドを実行し、変更履歴を確認する
 
 ## GitHub Desktop
 

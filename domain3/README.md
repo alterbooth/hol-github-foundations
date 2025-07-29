@@ -62,6 +62,36 @@ Issueの作成と操作について確認する。
     - Issue formsの定義は[サンプルのYAML](./bug-report.yml)をコピペして、`.github/ISSUE_TEMPLATE/bug-report.yml`を作成する
   - ナビゲーションのIssuesからIssue一覧画面に戻って「New issue」ボタンを押し、Issue templateとIssue formsを使ってIssueを作ってみる
 
+## ブランチ保護ルールの設定
+
+ブランチ保護ルールの作成について確認する。
+
+- １. `foundations-hands-on-2`リポジトリにgithub.comでアクセスする
+- ２． 新規ブランチ保護ルールの作成画面に移動する
+  - 「Settings」 > 「Branches」 > 「Add classic branch protection rule」 を押す
+  - ![BranchProtectionRuleの画面](../image/image3-63.png)
+- ３． ブランチルールを作成する
+  - 「Branch name pattern」を`main`にする
+    - 「Branch name pattern」は、特定のブランチだけでなく、全てのブランチや、fnmatch構文でのパターン指定ができる
+    - 詳細は[公式ドキュメント](https://docs.github.com/ja/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule#about-branch-protection-rules)を参照
+  - ![BranchProtectionRuleの入力1](../image/image3-64-a.png)
+  - 「Required a pull request before merging」にチェックを入れる
+  - 「Require conversation resolution before merging」にチェックを入れる
+  - 「Do not allow bypassing the above settings」にチェックを入れる
+    - 今回は`main`ブランチに直接pushできないことを確認するため、管理者権限を持っていてもブランチ保護ルールを無視できないように設定する
+  - ![BranchProtectionRuleの入力2](../image/image3-64-b.png)
+  - 画面下部の「Create」を押し、ブランチ保護ルールを作成する
+  - ![BranchProtectionRuleの作成](../image/image3-65.png)
+  - `main`を対象としたブランチ保護ルールが作成されたことを確認する
+  - ![BranchProtectionRuleの確認](../image/image3-66.png)
+- ３． ブランチ保護ルールが適用されているかを確認する
+  - 「Code」タブに戻り、ブランチが「main」になっていることを確認する
+  - 「Add files」 > 「Create new file」からファイルを新規作成する
+  - ![BranchProtectionRuleが適用されているか確認1](../image/image3-67.png)
+  - 任意の値を入力し、「Commit changes...」を押す
+  - 「You can't commit to main because it is a protected branch」となり、直接コミットができないことを確認する
+  - ![BranchProtectionRuleが適用されているか確認1](../image/image3-68.png)
+
 ## Pull requestの作成と操作
 
 Pull requestの作成と操作について確認する。
@@ -113,10 +143,14 @@ Pull requestの作成と操作について確認する。
   - コメントを書き終わったら「Finish your review」を押してレビューを送る。この時にレビューのコメントを入力し、状態として「Comment」「Approve」「Request changes」のいずれかを選ぶことができる(自分自身へのレビューの場合は「Comment」しか選択できない)ので、状態を選択して「Submit review」を押す
     - ![Finish your review](../image/image3-16-c.png)
 - ９. レビューを確認し、対応する
-  - Conversationタブでレビュー内容を確認して、修正を行う(修正内容をコミットし、プッシュする)
+  - Conversationタブに移動する
+  - レビューコメントが解決されていない場合、マージできないことを確認する
+  - ![cannot merge](../image/image3-45.png)
   - レビューに返信する
   - レビュアーはコメントを確認して、問題なければ「Resolve conversation」を押して解決済みにする
   - ![resolve conversation](../image/image3-16-d.png)
+  - 全てのレビューコメントが解決済みになると、マージできることを確認する
+  - ![merge](../image/image3-46.png)
 - １０. レビューで変更提案を出す
   - ツールチップを利用するか、[suggestionコードブロック](./suggestion.md)を直接入力する
   - ![suggestion](../image/image3-17.png)
@@ -139,6 +173,68 @@ Pull requestの作成と操作について確認する。
   - `.github/pull_request_template.md`を作成する
   - [サンプルテンプレート](./pull_request_template.md)を貼り付けてコミットする
   - 再度READMEを更新してpull requestを作成し、Descriptionにテンプレートの内容が含まれていることを確認する
+
+## フォークの操作
+
+フォークの操作について確認する。
+- １. [alterbooth/hol-github-foundations](https://github.com/alterbooth/hol-github-foundations) リポジトリにアクセスし、「Code」タブの「Fork」を押す
+  - ![リポジトリのフォーク](../image/image3-47.png)
+- ２. 「Create fork」を押し、フォークを作成する
+  - ![フォークの作成](../image/image3-48.png)
+- ３． フォークしたリポジトリに変更を加える
+  - 新規ブランチ`fork-1`を作成する
+  - `README.md`の文章に、誤字を混ぜた行を追加し、コミットする
+    - ここでは`このRipositoryはフォークです。`を追加する
+    - ![誤字の追加](../image/image3-48-b.png)
+- ４． プルリクエストを作成する
+  - 「Pull requests」タブの「New pull request」を押す
+  - 「compare」を押し`fork-1`ブランチを選択する
+  - ![フォークのプルリクエストを作成1](../image/image3-49.png)
+  - 「base repository」が`alterbooth/hol-github-foundations`になっていることを確認する
+  - 「head repository」が`自分のユーザーID/hol-github-foundations`になっていることを確認する
+  - ![フォークのプルリクエストを作成2](../image/image3-50.png)
+  - 「Create pull request」を押す
+  - タイトルや説明を記入し、「Create pull request」を押しプルリクエストを作成する
+  - `alterbooth/hol-github-foundations`にプルリクエストが作成されたことを確認する
+  - ![フォークのプルリクエストの確認](../image/image3-51.png)
+- ５． 任意のファイルを引用してCopilotと会話する
+  - 「Files changed」タブから「Ask Copilot」を押し、任意のファイルを選択し「Start chat」を押す
+  - ![AskCopilot1](../image/image3-52.png)
+  - 任意のファイルを引用してCopilotと会話できることを確認する
+  - ![AskCopilot2](../image/image3-53.png)
+- ６． 任意の行を引用してCopilotと会話する
+  - 「Files changed」タブから変更内容の任意の行にマウスカーソルを合わせる
+  - 表示されたフローティングメニューの「Copilotアイコン」を押す
+  - ![AskCopilotAboutLine1](../image/image3-54.png)
+  - 任意の行を引用してCopilotと会話できることを確認する
+  - ![AskCopilotAboutLine2](../image/image3-55.png)
+- ７． AssistiveモードのCopilotとプルリクエストについて会話する
+  - 自身が作成したプルリクエストを開き、画面右上の「Copilotアイコン」から「Assistive」を押す
+  - ![AssistiveModeCopilot1](../image/image3-56.png)
+  - プルリクエストについて会話できることを確認する
+  - ![AssistiveModeCopilot2](../image/image3-57.png)
+- ８． Review in codespaceの起動手順を確認する
+  - 「Files changed」タブから「Review in codespace」を押す
+  - ![ReviewInCodespace1](../image/image3-58-a.png)
+  - 「Create codespace」画面に移動したら「Create new codespace」ボタンがあることを確認する。（このボタンを押すとcodespaceが起動するが、手順の都合上起動しないで次に進む）
+  - ![ReviewInCodespace2](../image/image3-58-b.png)
+- ９． Codespaceの起動手順を確認する
+  - 「Code」タブを開く
+  - 「Code」メニューを押し、「Codespace」タブに切り替える
+  - 先ほど作成したCodespaceがあるため、「・・・」から「Open in Brower」ボタンがあることを確認する。（このボタンを押すとcodespaceが起動するが、手順の都合上起動しないで次に進む）
+  - ![RunCodespace](../image/image3-62.png)
+- １０．Copilotにレビューを依頼する
+  - 自身が作成したプルリクエストを開き、画面右側の「Reviewers」の「歯車アイコン」から「CopilotReview」を選択する
+  - ![ReviewInCodespace](../image/image3-60.png)
+  - Copilotがレビューしてくれることを確認する
+  - ![ReviewInCodespace](../image/image3-61.png)
+- １１． チェックアウトの方法を確認する
+  - 自身が作成したプルリクエストを開き、画面右側の「Code」を押す
+  - ![PullrequestCode](../image/image3-69.png)
+  - 「Local」タブを開き、「GitHub CLI」や「GitHub Desktop」でチェックアウトできることを確認する
+  - ![PullrequestCodeLocal](../image/image3-70.png) 
+  - 「Codespaces」タブを開き、「+」ボタンや「Create codespace on ブランチ名」でCodespaceを使用しでチェックアウトできることを確認する
+  - ![PullrequestCodeCodespaces](../image/image3-71.png) 
 
 ## Discussions
 
