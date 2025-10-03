@@ -5,18 +5,16 @@
 [github.com](https://github.com)で、自身のアカウントにパブリックなリポジトリを作成する。  
 本ドキュメントを参照しながら作業できるように、ブラウザの別のタブまたは別のウインドウで開いて作業する。
 
-- １. 以下のボタンを押して、新しいリポジトリの作成画面に移動する
-  - ![create new repository](../image/image1-2.png)  
+- １. 以下のボタンを押して、新しいリポジトリの作成画面に移動する  
+![create new repository](../image/image1-2.png)  
 - ２. リポジトリの作成画面で、次の項目を設定し、リポジトリを作成する
-  - 「Repository template」は「No template」を選択する
-  - 「Owner」は自分のアカウントを選ぶ(選択肢がある場合)
+  - 「Repository template」は「No template」を選択する(選択肢がある場合)
+  - 「Owner」は自分のアカウントを選ぶ
   - 「Repository name」は`foundations-hands-on-1`と入力
-  - 「Public」を選択
-  - 「Initialize this repository with:」は以下のように選択する
-    - 「Add a README file」にチェックを入れる
-    - 「Add .gitignore」は「.gitignore template: None」を選択する
-    - 「Choose a license」は「MIT License」を選択する
-  - ![repository settings](../image/image1-3.png)
+  - 「Choose visibility」は「Public」を選択
+  - 「Add README」を On にする
+  - 「Add license」は「MIT License」を選択する
+  ![repository settings](../image/image1-3.png)
 
 ## リポジトリのクローンとgitの操作
 
@@ -107,6 +105,8 @@
   - ターミナルで`git commit -m "initial commit"`コマンドを実行する
 - ７． 変更履歴を確認する
   - ターミナルで`git log`コマンドを実行し、変更履歴を確認する
+- ８． Codespacesを削除する
+  - https://github.com/codespaces にアクセスし、使用したCodespacesを削除する
 
 ## GitHub Desktop
 
