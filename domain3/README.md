@@ -8,7 +8,7 @@ Issueの作成と操作について確認する。
 - ２. 「New issue」ボタンでIssueを作る。入力できる項目を確認する。descriptionにマークダウンが使え、ツールチップでの入力やスラッシュコマンド(`/`を入力してみる)が使えることを確認する
   - ![new issue](../image/image3-1.png)
   - 「README.mdの更新」というtitleにする
-  - 「Submit new issue」ボタンを押してIssueを作成する
+  - 「Create」ボタンを押してIssueを作成する
 - ３. 作成したIssueの画面を見る。右側にメタデータがあることを確認し、それぞれが何を表しているかを確認する。
   - メタデータのDevelopmentから`foundations-hands-on-2`リポジトリを選択し、`update-readme-2`ブランチを選択し、「Apply」を押してブランチと紐付けてみる
   - ![development](../image/image3-2.png)
@@ -20,7 +20,7 @@ Issueの作成と操作について確認する。
 - ６. それぞれのIssueの一番下のボタンからクローズ、再オープンしてみる
   - 「Close issue」ボタンの右の「▼」でプルダウンが開き、クローズに2種類あることを確認する
   - ![close issue](../image/image3-4.png)
-  - ナビゲーションのIssuesをクリックしてIssueの一覧画面に戻り、フィルターの「is:open」を「is:closed」に変更すると、クローズしたissueの一覧が表示される。そのうちの一つにアクセスして、再度オープンしてみる
+  - ナビゲーションのIssuesをクリックしてIssueの一覧画面に戻り、フィルターの「state:open」を「state:closed」に変更すると、クローズしたissueの一覧が表示される。そのうちの一つにアクセスして、再度オープンしてみる
   - ![filter box](../image/image3-5.png)
   - ![reopen issue](../image/image3-6.png)
 - ７. 2つめのIssueにアクセスし、重複とするためにコメントに`Duplicate of #1`と入力して「Comment」ボタンを押す
@@ -33,7 +33,10 @@ Issueの作成と操作について確認する。
 > - もし重複したIssueを見つけたとしても、多くの人にはIssueの削除の権限がない
 > - 削除できないが、「解決済み」としてcloseするのは適切でない
 > - そこで、クローズする前にマークしておくことで、クローズの理由を伝えることができる
-> - 現在はクローズの種類として「Close as not planned」があるのでそれを併せて使う
+> - 現在はクローズの種類として単にクローズとする「Close issue」に加え以下の２種類も選択可能
+>   - Close as not planned：不要になったためクローズ
+>   - Close as duplicate：他のIssueと重複しているためクローズ  
+（`Duplicate of #1`とする場合と同様の操作となる）
 
 - ８. リポジトリをもう１つ作る
   - 名前は`foundations-hands-on-3`
@@ -57,9 +60,11 @@ Issueの作成と操作について確認する。
     - ![Preview and edit](../image/image3-10-b.png)
     - ![Custom template のプレビュー画面](../image/image3-10-c.png)
     - ![Custom template の編集画面](../image/image3-10-d.png)
+    - ![Custom template のcommit画面](../image/image3-10-e.png)
     - 作成したファイルは`.github/ISSUE_TEMPLATE/`にあることを確認する
   - **Forms**：Bug report のフォームを作る
-    - Issue formsの定義は[サンプルのYAML](./bug-report.yml)をコピペして、`.github/ISSUE_TEMPLATE/bug-report.yml`を作成する
+    - Issue formsの定義は[サンプルのYAML](./bug-report.yml)をコピペして、`.github/ISSUE_TEMPLATE/bug-report.yml`を作成する  
+    （Issue template の作成は「Settings」の「Set up templates」から作成可能だが、Issue formsの作成は.ymlファイルで作成する点に注意）
   - ナビゲーションのIssuesからIssue一覧画面に戻って「New issue」ボタンを押し、Issue templateとIssue formsを使ってIssueを作ってみる
 
 ## ブランチ保護ルールの設定
@@ -75,21 +80,20 @@ Issueの作成と操作について確認する。
     - 「Branch name pattern」は、特定のブランチだけでなく、全てのブランチや、fnmatch構文でのパターン指定ができる
     - 詳細は[公式ドキュメント](https://docs.github.com/ja/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule#about-branch-protection-rules)を参照
   - ![BranchProtectionRuleの入力1](../image/image3-64-a.png)
-  - 「Required a pull request before merging」にチェックを入れる
-  - 「Require conversation resolution before merging」にチェックを入れる
-  - 「Do not allow bypassing the above settings」にチェックを入れる
-    - 今回は`main`ブランチに直接pushできないことを確認するため、管理者権限を持っていてもブランチ保護ルールを無視できないように設定する
+  - 以下の項目にチェックを入れ、画面下部の「Create」からブランチ保護ルールを作成する
+    - Required a pull request before merging：マージするにはPull Request を介すことを強制する
+    - Require conversation resolution before merging：マージするにはPull Request上の全てのコメントが解決済みとなっている必要がある
+    - Do not allow bypassing the above settings：どのロールでもこのブランチ保護ルールを無視できない
   - ![BranchProtectionRuleの入力2](../image/image3-64-b.png)
-  - 画面下部の「Create」を押し、ブランチ保護ルールを作成する
-  - ![BranchProtectionRuleの作成](../image/image3-65.png)
   - `main`を対象としたブランチ保護ルールが作成されたことを確認する
   - ![BranchProtectionRuleの確認](../image/image3-66.png)
 - ３． ブランチ保護ルールが適用されているかを確認する
   - 「Code」タブに戻り、ブランチが「main」になっていることを確認する
   - 「Add files」 > 「Create new file」からファイルを新規作成する
   - ![BranchProtectionRuleが適用されているか確認1](../image/image3-67.png)
-  - 任意の値を入力し、「Commit changes...」を押す
+  - 任意のファイル名と内容を入力し、「Commit changes...」を押す
   - 「You can't commit to main because it is a protected branch」となり、直接コミットができないことを確認する
+  - 「Propose changes」を押すと、Pull Request 作成画面に遷移する（ここではPull Requestは作成しない）
   - ![BranchProtectionRuleが適用されているか確認1](../image/image3-68.png)
 
 ## Pull requestの作成と操作
@@ -98,17 +102,23 @@ Pull requestの作成と操作について確認する。
 
 - １. `foundations-hands-on-2`リポジトリにgithub.comでアクセスし、CODEOWNERSファイルを新規に作成する
   - ハンズオンの相方をリポジトリに招待する
-    - リポジトリのナビゲーションのSettingsからCollaborators and teamsにアクセスし、「Add people」ボタンを押す
+    - リポジトリのナビゲーションのSettingsからCollaboratorsにアクセスし、「Add people」ボタンを押す
     - ![ユーザーをリポジトリへ招待](../image/image3-35.png)
+    - 相方のGitHubアカウント、もしくはメールアドレスを入力し「Add to repository」を押す
     - 相方に招待メールが届いているので、リンクをクリックして招待を受け入れてもらう
   - ハンズオンの相方をCODEOWNERSファイルでレビュアーにいれておく
   - 書式は`*    @相方のアカウント名`
   - ![CODEOWNERS](../image/image3-11.png)
 - ２. github.com上でリポジトリにアクセスし、ナビゲーションのCodeから適当なファイルを選び、設定したアカウント名がオーナーとして表示されることを確認する（マウスカーソルを乗せると表示される）
   - ![hover codeowner](../image/image3-12.png)
-- ３. mainブランチの`README.md`を更新。`foundations-hands-on-1`という記載を`foundations-hands-on-2`に修正し、直接プッシュではなく`Create a new branch`を押す
-  - Pull request画面に移動するが、本ハンズオンでは、ナビゲーションのPull requestsを押してキャンセルする
+- ３. mainブランチの`README.md`を更新する
+  - `foundations-hands-on-1`という記載を`foundations-hands-on-2`に修正し「Commit changes...」を押す
+  - `Create a new branch...`が選択されていることを確認し「Propose Changes」を押す  
+  （ブランチ保護ルールが適用されているため直接プッシュは選択肢に表示されない）
+  - Pull request作成画面に移動するが、本ハンズオンでは、ナビゲーションのPull requestsを押してキャンセルする
 - ４. 作成したブランチからPull requestを作る
+  - 以下のような表示が出ていれば「Compare & pull request」でPull request の作成画面に直接移動できるが、今回は通常の手順で作成するため無視する
+  - ![new pull request](../image/image3-13-c.png)
   - ナビゲーションのPull requestsから「New Pull request」を押す
   - ![new pull request](../image/image3-13.png)
   - Compare changes で比較ブランチを 3. で作成したブランチに切り替える
@@ -208,27 +218,22 @@ Pull requestの作成と操作について確認する。
   - ![AskCopilotAboutLine1](../image/image3-54.png)
   - 任意の行を引用してCopilotと会話できることを確認する
   - ![AskCopilotAboutLine2](../image/image3-55.png)
-- ７． AssistiveモードのCopilotとプルリクエストについて会話する
-  - 自身が作成したプルリクエストを開き、画面右上の「Copilotアイコン」から「Assistive」を押す
-  - ![AssistiveModeCopilot1](../image/image3-56.png)
-  - プルリクエストについて会話できることを確認する
-  - ![AssistiveModeCopilot2](../image/image3-57.png)
-- ８． Review in codespaceの起動手順を確認する
+- ７． Review in codespaceの起動手順を確認する
   - 「Files changed」タブから「Review in codespace」を押す
   - ![ReviewInCodespace1](../image/image3-58-a.png)
   - 「Create codespace」画面に移動したら「Create new codespace」ボタンがあることを確認する。（このボタンを押すとcodespaceが起動するが、手順の都合上起動しないで次に進む）
   - ![ReviewInCodespace2](../image/image3-58-b.png)
-- ９． Codespaceの起動手順を確認する
+- ８． Codespaceの起動手順を確認する
   - 「Code」タブを開く
   - 「Code」メニューを押し、「Codespace」タブに切り替える
   - 先ほど作成したCodespaceがあるため、「・・・」から「Open in Brower」ボタンがあることを確認する。（このボタンを押すとcodespaceが起動するが、手順の都合上起動しないで次に進む）
   - ![RunCodespace](../image/image3-62.png)
-- １０．Copilotにレビューを依頼する
+- ９．Copilotにレビューを依頼する
   - 自身が作成したプルリクエストを開き、画面右側の「Reviewers」の「歯車アイコン」から「CopilotReview」を選択する
   - ![ReviewInCodespace](../image/image3-60.png)
   - Copilotがレビューしてくれることを確認する
   - ![ReviewInCodespace](../image/image3-61.png)
-- １１． チェックアウトの方法を確認する
+- １０． チェックアウトの方法を確認する
   - 自身が作成したプルリクエストを開き、画面右側の「Code」を押す
   - ![PullrequestCode](../image/image3-69.png)
   - 「Local」タブを開き、「GitHub CLI」や「GitHub Desktop」でチェックアウトできることを確認する
