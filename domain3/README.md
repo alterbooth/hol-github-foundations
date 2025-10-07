@@ -101,12 +101,14 @@ Issueの作成と操作について確認する。
 Pull requestの作成と操作について確認する。
 
 - １. `foundations-hands-on-2`リポジトリにgithub.comでアクセスし、CODEOWNERSファイルを新規に作成する
-  - ハンズオンの相方をリポジトリに招待する
+  - ハンズオンの相方をリポジトリに招待する  
+  ※ 相方がいない場合はこの手順はスキップして下さい
     - リポジトリのナビゲーションのSettingsからCollaboratorsにアクセスし、「Add people」ボタンを押す
     - ![ユーザーをリポジトリへ招待](../image/image3-35.png)
     - 相方のGitHubアカウント、もしくはメールアドレスを入力し「Add to repository」を押す
     - 相方に招待メールが届いているので、リンクをクリックして招待を受け入れてもらう
-  - ハンズオンの相方をCODEOWNERSファイルでレビュアーにいれておく
+  - ハンズオンの相方をCODEOWNERSファイルでレビュアーにいれておく  
+  ※ 相方がいない場合はご自身のアカウントを指定して下さい
   - 書式は`*    @相方のアカウント名`
   - ![CODEOWNERS](../image/image3-11.png)
 - ２. github.com上でリポジトリにアクセスし、ナビゲーションのCodeから適当なファイルを選び、設定したアカウント名がオーナーとして表示されることを確認する（マウスカーソルを乗せると表示される）
@@ -172,7 +174,8 @@ Pull requestの作成と操作について確認する。
   - ![link issue to pull request](../image/image3-19.png)
 - １２. Pull requestをApproveし、マージする
   - レビュアーは自分がコメントしたものが全て解決され、修正内容が問題ないと判断したらApproveする
-  - Files changedタブの「Review changes」から「Approve」を選択して「Submit review」を押す
+  - Files changedタブの「Review changes」から「Approve」を選択して「Submit review」を押す  
+  ※ ご自身が行った変更に対してレビューしている場合はApproveできません
     - ![approve](../image/image3-19-a.png)
   - 全てのレビュアーがApproveしたら、Conversationタブの下の方の「Merge pull request」を押してマージする
     - ![merge](../image/image3-19-b.png)
