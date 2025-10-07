@@ -131,7 +131,8 @@ Pull requestの作成と操作について確認する。
   - Descriptionは適宜入力しつつ、`Close #1`を入れる(もし作成したIssueの番号がずれてるなら#の後ろの数字を変える。#を入れたら補完が効く)
   - 「Create pull request」ボタンの右の「▼」を押し、draftで作成することもできることを確認する
   - 「Create pull request」ボタンを押してPull requestを作成する
-  - 作成したらCODEOWNERSに先ほど入れた、ハンズオンの相方の人が自動的にレビュアーに入ってる事を確認する
+  - 作成したらCODEOWNERSに先ほど入れた、ハンズオンの相方の人が自動的にレビュアーに入ってる事を確認する  
+  ※ CODEOWNERSに自身のアカウントを指定した場合はレビュアーに指定されない
 - ５. 作成したPull requestの画面で、これらの「Conversation」「Commits」「Checks」「Files changed」タブがあることを確認する
   - ![4 tabs](../image/image3-36.png)
 - ６. コメントしてみる
