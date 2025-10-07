@@ -17,7 +17,7 @@
   ![repository settings](../image/image1-3.png)
 
 ## リポジトリのクローンとgitの操作
-### ★ Visual Studio Code を利用する場合
+### Visual Studio Code を利用する場合
 ローカルのPCにクローンする準備を行う
 - １. 事前にインストールしていたVisual Studio Codeを起動する
   - 「ターミナル」メニューから「新しいターミナル」を選択する
@@ -28,19 +28,19 @@
   - `git config --global user.name "あなたの名前"`コマンドを実行する
   - `git config --global user.email "あなたのgithubのアカウントのメールアドレス"`コマンドを実行する
     - (*)`--global`オプションをつけると、この設定があなたのPCのアカウント全体に適用される。この設定を特定のリポジトリだけに適用したい場合は、後述のクローンしたディレクトリに移動した（★）あとに、`--global`オプションを付けずに実行する。
-- ３. 「★ 共通の手順」に進む
+- ３. 「共通の手順」に進む
 
-### ★ Codespaces を利用する場合
+### Codespaces を利用する場合
 仮想環境（Codespaces）にクローンする準備を行う
 - １. GitHub Codespacesを起動する
   - [Codespacesのテンプレート選択ページ](https://github.com/codespaces/templates) にアクセスし、`Blank`を選択する。
   - ![Codespacesテンプレート選択](../image/image1-11.png)
   - 起動したCodespacesのターミナルが表示されていることを確認する
   - ![Codespacesターミナル](../image/image1-12.png)
--  ２. 「★ 共通の手順」に進む
-  - 「★ Visual Studio Code を利用する」の２．の手順は、Codespacesを開く際に内部的に行われる
+-  ２. 「共通の手順」に進む
+    -  「Visual Studio Code を利用する」の２．の手順は、Codespacesを開く際に内部的に行われる
 
-### ★ 共通の手順
+### 共通の手順
 それぞれの環境にクローンする
 - １. ブラウザで開いているgithub.comのリポジトリのページで、ナビゲーションのCodeを開き、「Code」ボタンからHTTPSのURLをコピーする
   - ![URLをコピー](../image/image1-1.png)
@@ -95,7 +95,8 @@
 
 ## リポジトリの初期化
 
-リポジトリの初期化を行ってみる。
+リポジトリの初期化を行ってみる。  
+※ Visual Studio Code を利用する場合は、手順２．から進める
 
 - １. GitHub Codespacesを起動する
   - [Codespacesのテンプレート選択ページ](https://github.com/codespaces/templates) にアクセスし、`Blank`を選択する。
