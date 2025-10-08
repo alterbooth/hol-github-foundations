@@ -93,7 +93,8 @@ Issueの作成と操作について確認する。
   - ![BranchProtectionRuleが適用されているか確認1](../image/image3-67.png)
   - 任意のファイル名と内容を入力し、「Commit changes...」を押す
   - 「You can't commit to main because it is a protected branch」となり、直接コミットができないことを確認する
-  - 「Propose changes」を押すと、Pull Request 作成画面に遷移する（ここではPull Requestは作成しない）
+  - 「Propose changes」を押すと、Pull Request 作成画面に遷移する（ここではPull Requestは作成しない）  
+  ※ 以後、`foundations-hands-on-2`リポジトリの mainブランチにファイルを作成したり、何か変更を加える場合には、必ず Pull request が必要となります 
   - ![BranchProtectionRuleが適用されているか確認1](../image/image3-68.png)
 
 ## Pull requestの作成と操作
