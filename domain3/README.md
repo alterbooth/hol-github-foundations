@@ -192,13 +192,14 @@ Pull requestの作成と操作について確認する。
 ## フォークの操作
 
 フォークの操作について確認する。
+
 - １. [alterbooth/hol-github-foundations](https://github.com/alterbooth/hol-github-foundations) リポジトリにアクセスし、「Code」タブの「Fork」を押す
   - ![リポジトリのフォーク](../image/image3-47.png)
 - ２. 「Create fork」を押し、フォークを作成する
   - ![フォークの作成](../image/image3-48.png)
 - ３． フォークしたリポジトリに変更を加える
   - 新規ブランチ`fork-1`を作成する
-  - `README.md`の文章に、誤字を混ぜた行を追加し、コミットする
+  - `fork-1`ブランチで`README.md`の文章に誤字を混ぜた行を追加し、コミットする
     - ここでは`このRipositoryはフォークです。`を追加する
     - ![誤字の追加](../image/image3-48-b.png)
 - ４． プルリクエストを作成する
@@ -212,10 +213,10 @@ Pull requestの作成と操作について確認する。
   - タイトルや説明を記入し、「Create pull request」を押しプルリクエストを作成する
   - `alterbooth/hol-github-foundations`にプルリクエストが作成されたことを確認する
   - ![フォークのプルリクエストの確認](../image/image3-51.png)
-- ５． 任意のファイルを引用してCopilotと会話する
-  - 「Files changed」タブから「Ask Copilot」を押し、任意のファイルを選択し「Start chat」を押す
+- ５． ファイルを引用してCopilotと会話する
+  - 「Files changed」タブから「Ask Copilot」を押す
   - ![AskCopilot1](../image/image3-52.png)
-  - 任意のファイルを引用してCopilotと会話できることを確認する
+  - ファイルを引用してCopilotと会話できることを確認する
   - ![AskCopilot2](../image/image3-53.png)
 - ６． 任意の行を引用してCopilotと会話する
   - 「Files changed」タブから変更内容の任意の行にマウスカーソルを合わせる
