@@ -89,6 +89,8 @@
   - ローカルの変更履歴を確認する
     - ログが途中まで表示され、画面下部に`:`が表示されている場合、「矢印キー」または「jキー」/「kキー」でスクロールできる
     - ログの表示を終了するには、「q」キーを入力する
+- １２． Codespacesを削除する
+  - https://github.com/codespaces にアクセスし、使用したCodespacesを削除する
 
 ※ Gitの初期設定（`git config`）についての詳細は、[Gitの初期設定](https://git-scm.com/book/ja/v2/%e4%bd%bf%e3%81%84%e5%a7%8b%e3%82%81%e3%82%8b-%e6%9c%80%e5%88%9d%e3%81%aeGit%e3%81%ae%e6%a7%8b%e6%88%90)の「個人の識別情報」をご参照ください。
 
@@ -99,7 +101,6 @@
 
 - １. GitHub Codespacesを起動する
   - [Codespacesのテンプレート選択ページ](https://github.com/codespaces/templates) にアクセスし、`Blank`を選択する。
-  - ![Codespacesテンプレート選択](../image/image1-11.png)
   - 起動したCodespacesのターミナルが表示されていることを確認する
   - ![Codespacesターミナル](../image/image1-12.png)
 - ２． リポジトリとなるディレクトリを作成する
